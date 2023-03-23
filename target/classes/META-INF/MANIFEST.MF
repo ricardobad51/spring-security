@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: rbbel
+Build-Jdk: 17.0.1
+Implementation-Title: intro-spring-security
+Implementation-Version: 1.0-SNAPSHOT
+Implementation-Vendor-Id: br.com.rbbelem
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/intro-spring-security
+Created-By: Maven Integration for Eclipse
+
