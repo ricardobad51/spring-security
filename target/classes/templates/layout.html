@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
-	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 	<head>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, user-scalable=no"/>
@@ -18,10 +19,10 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarCollapse">
 				<ul class="navbar-nav mr-auto">
-					<li class="nav-item">
-						<a class="nav-link" href="/lista-usuarios">Usuários</a>
+					<li class="nav-item" sec:authorize="hasRole('ADMIN')">
+						<a class="nav-link" href="/lista-usuarios" >Usuários</a>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item" sec:authorize="hasRole('EDITOR')">
 						<a class="nav-link" href="/dados-acesso">Dados de acesso</a>
 					</li>
 				</ul>
